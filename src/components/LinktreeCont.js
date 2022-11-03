@@ -1,9 +1,9 @@
 import React from "react";
 import slack from "../assets/slack.svg";
 import sharebtn from "../assets/Avatar share.png";
-import I4G from "../assets/I4G.png";
-import zuri from "../assets/zuri-logo.png";
 import MoreIcon from "../assets/more.png";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const LinkButton = (props) => {
   return (
@@ -120,6 +120,10 @@ const LinktreeCont = () => {
           >
             <LinkButton name="Design Books" />
           </a>
+
+          <Link to="/contact" id="contact">
+            <LinkButton name="Contact Me" />
+          </Link>
         </div>
       </div>
       <div className="social_icons">
@@ -145,25 +149,6 @@ const LinktreeCont = () => {
           </svg>
         </a>
       </div>
-
-      <footer className="footer_container">
-        <>
-          <hr />
-          <div className="content">
-            <div>
-              <Image src={zuri} alt="zuri logo" className="zuri_logo" />
-            </div>
-
-            <div className="footer_text">
-              <p>HNG Internship 9 Frontend Task</p>
-            </div>
-
-            <div>
-              <Image src={I4G} alt="I4g logo" className="i4g_logo" />
-            </div>
-          </div>
-        </>
-      </footer>
     </div>
   );
 };
